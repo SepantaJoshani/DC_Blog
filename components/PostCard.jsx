@@ -23,7 +23,7 @@ const PostCard = ({ post }) => {
   return (
     <article className="relative p-0 pb-12 mb-8 bg-white rounded-lg shadow-lg lg:px-8">
       <div className="flex items-center gap-x-3">
-        <div className="flex justify-center ">
+        <div className="flex justify-center mb-3">
           <div className="relative w-16 h-16 md:w-28 md:h-28 lg:h-36 lg:w-36">
             <Image
               alt={post.author.name}
@@ -42,6 +42,7 @@ const PostCard = ({ post }) => {
           layout="responsive"
           width={280}
           height={240}
+          className="rounded-lg"
         />
       </div>
       <h1 className="mb-8 text-2xl font-extrabold text-center transition duration-700 cursor-pointer md:text-3xl hover:text-pink-600">
