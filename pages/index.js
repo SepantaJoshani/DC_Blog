@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { PostCard, PostWidget, Categories, } from "../components/index";
 
 const posts = [
   {
@@ -20,18 +21,19 @@ export default function Home() {
         <title>DC BLOG</title>
         <link rel="icon" href="/batman.png"></link>
       </Head>
-      <div className="container bg-gray-400 px-10 mb-8">
-        <div className="grid grid-cols-1 lg:first-letter:grid-cols-12 gap-12">
+     
+      <div className="container  px-10 mb-8 ">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 col-span-1">
             {posts.map(({ title, excerpt, id }, i) => (
-              <div key={id}>
-                <h1>{title}</h1>
-                <h3>{excerpt}</h3>
-              </div>
+              <PostCard key={id} title={title} excerpt={excerpt} />
             ))}
           </div>
           <div className="lg:col-span-4 col-span-1">
-            <div className="relative top-8 lg:sticky"></div>
+            <div className="relative top-8 lg:sticky">
+              <PostWidget />
+              <Categories />
+            </div>
           </div>
         </div>
       </div>
