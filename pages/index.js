@@ -4,7 +4,7 @@ import { getPosts } from "../services/index";
 
 export default function Home({ posts }) {
   if (!posts) return <p>loading ...</p>;
-  console.log(posts);
+
   return (
     <>
       <Head>

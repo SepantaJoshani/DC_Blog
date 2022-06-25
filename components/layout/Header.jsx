@@ -10,7 +10,7 @@ const categories = [
 const Header = () => {
   return (
     <header className="container px-10 mx-auto mb-8">
-      <nav className="flex items-center w-full py-8 border-b border-blue-400 md:justify-between justice">
+      <nav className="flex items-center w-full py-8 border-b border-white md:justify-between justice">
         <div className="block">
           <Link href="/">
             <div className="relative w-16 h-16 overflow-hidden rounded-lg ">
