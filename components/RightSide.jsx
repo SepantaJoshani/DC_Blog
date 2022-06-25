@@ -2,10 +2,10 @@ import React from "react";
 import Categories from "./Categories";
 import PostWidget from "./PostWidget";
 
-const RightSide = () => {
+const RightSide = ({ slug, categories }) => {
   return (
     <div className="relative top-8 lg:sticky">
-      <PostWidget />
+      <PostWidget slug={slug} categories={categories} />
       <Categories />
     </div>
   );

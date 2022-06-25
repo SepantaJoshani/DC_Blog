@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const CalenderIcon = () => (
+export const CalenderIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="w-5 h-5"
