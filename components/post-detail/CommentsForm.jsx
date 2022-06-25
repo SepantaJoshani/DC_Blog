@@ -68,7 +68,7 @@ const CommentsForm = ({ slug }) => {
         emailRef.current.value = "";
         commentRef.current.value = "";
       })
-      .catch((err) => console.log(err));
+      .catch((err) => (err));
   };
 
   return (
