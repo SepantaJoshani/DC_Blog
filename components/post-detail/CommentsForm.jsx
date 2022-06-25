@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { toast } from "react-toastify";
 import { submitComment } from "../../services";
 
 const CommentsForm = ({ slug }) => {
@@ -23,9 +24,9 @@ const CommentsForm = ({ slug }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setError(false);
-    const email = emailRef.current.value;
-    const name = nameRef.current.value;
-    const comment = commentRef.current.value;
+    let email = emailRef.current.value;
+    let name = nameRef.current.value;
+    let comment = commentRef.current.value;
     const storedData = storedDataRef.current.checked;
 
     if (!email || !name || !comment) {
@@ -53,10 +54,19 @@ const CommentsForm = ({ slug }) => {
 
     submitComment(commentObj)
       .then((res) => {
-        setSuccessMsg(true);
-        setTimeout(() => {
-          setSuccessMsg(false);
-        }, 3000);
+        toast.success("🦄 Your comment submitted", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        commentRef.current.value = "";
       })
       .catch((err) => console.log(err));
   };
