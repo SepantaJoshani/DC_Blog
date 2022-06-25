@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useContext } from "react";
+import React, { useContext,useState,useEffect } from "react";
+import { getCategories } from "../../services";
 
-const categories = [
-  { name: "Villans", slug: "react" },
-  { name: "Heroes", slug: "villans" },
-];
 
 const Header = () => {
+ const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    getCategories().then((data) => setCategories(data));
+  }, []);
   return (
     <header className="container px-10 mx-auto mb-8">
       <nav className="flex items-center w-full py-8 border-b border-white md:justify-between justice">
