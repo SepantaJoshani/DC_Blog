@@ -39,7 +39,7 @@ export default async function asynchandler(req, res) {
     });
     return res.status(200).send(result);
   } catch (error) {
-    console.log(error);
+    error;
     return res.status(200).send(error);
   }
 
