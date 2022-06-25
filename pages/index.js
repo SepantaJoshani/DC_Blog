@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { PostCard, PostWidget, Categories } from "../components/index";
+import { PostCard, RightSide } from "../components/index";
+
 import { getPosts } from "../services/index";
 
 export default function Home({ posts }) {
@@ -20,10 +21,7 @@ export default function Home({ posts }) {
             ))}
           </div>
           <div className="col-span-1 lg:col-span-4">
-            <div className="relative top-8 lg:sticky">
-              <PostWidget />
-              <Categories />
-            </div>
+            <RightSide />
           </div>
         </div>
       </div>
