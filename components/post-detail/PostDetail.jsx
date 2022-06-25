@@ -62,7 +62,7 @@ const PostDetail = ({ post }) => {
   };
 
   return (
-    <div className="relative pb-12 mb-8 bg-white rounded-lg shadow-lg lg:p-8 ">
+    <div className="relative px-3 pb-12 mb-8 bg-white rounded-lg shadow-lg lg:p-8 ">
       <div className="flex items-center gap-x-3">
         <div className="flex justify-center mb-3">
           <div className="relative w-16 h-16 md:w-28 md:h-28 lg:h-36 lg:w-36">
